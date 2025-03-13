@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MPC-HC - Media Player Classic Home Cinema</title>
+    <link rel="icon" type="image/x-icon" href="Media_Player_Classic_logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.9.7/dist/cdn/beer.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.9.7/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+    <style>
+        body {
+            font-family: "Roboto";
+        }
+
+        .hero {
+            background: url('back.png') no-repeat center center/cover;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            display: flex;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        header {
+            padding: 1em;
+        }
+
+        li>a:hover {
+            text-decoration: underline !important;
+        }
+
+        .logo {
+            font-size: 1em;
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+        }
+
+        nav {
+            font-size: 1.5em;
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+
+        button:hover {
+            background-color: color-mix(in srgb, var(--primary) 50%, #dee0ff 50%);
+        }
+
+        .features-container>div {
+            height: auto;
+            background: var(--surface-bright);
+            flex: 1 1 280px;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            margin: 1em;
+        }
+
+        .preview {
+            border-radius: 7px;
+            border: solid 1px;
+            cursor: zoom-in;
+            max-height: 200px;
+            box-shadow: 0 1px 3px 0 #0000007d;
+        }
+
+        .preview:hover {
+            box-shadow: 0 1px 10px 0 #0000007d;
+        }
+
+        .formats {
+            height: fit-content;
+            background-color: black;
+            font-weight: 900;
+            font-size: 2em;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: inset 0 0 0 1px white;
+        }
+
+        .formats>div {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0.5em;
+            border: 1px solid white;
+            border-radius: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Media_Player_Classic_logo.png" alt="MPC-HC Logo" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+                MPC-HC
+            </div>
+            <ul style="margin: 0; justify-content: end;">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div>
+                <h1>Media Player Classic Home Cinema</h1>
+                <p>Lightweight media player</p>
+
+                <div style="display: flex; align-items: center; justify-items: center; justify-content: center;">
+                    <a href="https://github.com/clsid2/mpc-hc/releases">
+                        <button class="btn ripple">Download</button>
+                    </a>
+
+                    <a target="_blank" href="https://github.com/clsid2/mpc-hc/blob/develop/CONTRIBUTING.md">
+                        <button style="margin-left: 0;" class="btn ripple"><img style="height: 100%;" src="github-mark.svg" />Contribute</button>
+                    </a>
+                </div>
+            </div>
+            <img style="width: 400px; aspect-ratio: 1.271028; object-fit: contain;" src="window.png" />
+
+        </div>
+
+
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <h2 style="margin: 1rem;">Features</h2>
+        <div class="features-container">
+            <div>
+                <h3>Lightweight</h3>
+                <p>Uses minimal system resources.</p>
+                <div class="formats" style="font-size: 1.5em;">
+                    <div>
+                        20MB Download
+                    </div>
+                    <div>
+                        5MB Memory Use
+                    </div>
+                    <div>
+                        Opens Fast
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Customizable</h3>
+                <p>Tailor your viewing experience with flexible settings.</p>
+                <img class="preview" onclick="opendialog()" src="options.png" height="200">
+            </div>
+            <div>
+                <h3>High Compatibility</h3>
+                <p>Supports a wide range of video and audio formats.</p>
+                <div class="formats">
+                    <div>
+                        .FLV
+                    </div>
+                    <div>
+                        .MP4
+                    </div>
+                    <div>
+                        .MP3
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Open Source</h3>
+                <p>This program is open source and released under the GNU General Public License.</p>
+                <a target="_blank" href="https://github.com/clsid2/mpc-hc/blob/develop/CONTRIBUTING.md">
+                    <button style="margin-left: 0;" class="btn ripple"><img style="height: 100%;" src="github-mark.svg" />Contribute</button>
+                </a>
+            </div>
+            <a target="_blank" href="https://github.com/clsid2/mpc-hc/blob/develop/Readme.md">
+                <button class="ripple">Full list of features</button>
+            </a>
+            <button class="ripple" onclick="openGallery()">Screenshot Gallery</button>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section style="margin: 1em; padding: 1em 0; padding-bottom: 1.5em; border: 1px solid var(--surface-bright); border-left: 0; border-right:0" id="download" class="section download">
+        <h2 style="margin: 0;">Download Now</h2>
+        <p>Get the latest version of MPC-HC and enjoy high quality playback.</p>
+        <a href="https://github.com/clsid2/mpc-hc/releases">
+            <button style="margin: 0;" class="btn ripple">Download</button>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section style="margin: 1em;" id="about" class="section">
+        <h2>About MPC-HC</h2>
+        <div class="about-content">
+            <p>
+                <strong>Media Player Classic - Home Cinema (MPC-HC)</strong> is a free, open-source media player for Windows,
+                known for its lightweight design and comprehensive format support. Originating as a fork of the original
+                Media Player Classic (MPC), MPC-HC was created to enhance and update the functionalities of its predecessor.
+            </p>
+            <p>
+                The original MPC was developed by Microsoft in 2003 as a lightweight, customizable media player. However,
+                development ceased when the lead developer became inactive. Recognizing the need for continued development,
+                <strong>Casimir666</strong> initiated the MPC-HC project in 2006, building upon the groundwork laid by MPC.
+                This revival aimed to provide a modern, efficient media player while retaining the simplicity and performance
+                of the original.
+            </p>
+            <p>
+                MPC-HC introduced numerous enhancements, including:
+            </p>
+            <ul>
+                <li>Support for new video and audio formats</li>
+                <li>Improved decoding capabilities</li>
+                <li>Anti-tearing options</li>
+                <li>Enhanced Video Renderer (EVR) support</li>
+            </ul>
+            <p>
+                The project saw active development and community engagement, earning recognition as SourceForge's
+                <em>"Community Choice" Project of the Month</em> in November 2014.
+            </p>
+            <p>
+                Development continued robustly until <strong>July 16, 2017</strong>, when version 1.7.13 was released,
+                marking the official end of active development due to a shortage of developers. Despite this, the open-source
+                nature of MPC-HC allowed the community to continue its legacy. Notably, a developer known as <strong>clsid2</strong>
+                has maintained and updated the player, ensuring its compatibility with modern codecs and operating systems.
+            </p>
+            <p>
+                Today, MPC-HC lives on in <strong>clsid2</strong>'s fork
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>MPC-HC</p>
+    </footer>
+
+    <dialog class="max" id="imgdialog" onclick="closedialog()"><img style="border-radius: 3px;cursor: zoom-out; width: 100%; height: 100%; object-fit: contain;" src="options.png"></dialog>
+
+    <dialog class="max" id="gallerydialog">
+        <div style="display: flex; justify-content: flex-end;">
+            <button onclick="closeGallery()">Close</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; overflow-y: scroll; height: 90vh;">
+            <img src="screenshot1.png" style="width: 100%; height: auto;">
+            <img src="screenshot2.png" style="width: 100%; height: auto;">
+            <img src="screenshot3.png" style="width: 100%; height: auto;">
+            <!-- Add more images as needed -->
+        </div>
+    </dialog>
+
+    <script>
+        function opendialog()
+        {
+            imgdialog.showModal();
+            document.body.style.overflow = "hidden";
+        }
+        imgdialog.addEventListener("close", closedialog);
+        function closedialog()
+        {
+            imgdialog.close();
+            document.body.style.overflow = "";
+        }
+
+        function openGallery()
+        {
+            gallerydialog.showModal();
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeGallery()
+        {
+            gallerydialog.close();
+            document.body.style.overflow = "";
+        }
+    </script>
+</body>
+</html>
