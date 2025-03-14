@@ -136,6 +136,17 @@
             color: white;
             border-radius: 0 !important;
         }
+
+        #download {
+            margin: 1em;
+            padding: 1em 0;
+            padding-bottom: 1.5em;
+            border: 1px solid var(--surface-bright);
+            border-left: 0;
+            border-right: 0;
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
     <link rel="stylesheet" href="theme.css">
 </head>
@@ -234,12 +245,15 @@
     </section>
 
     <!-- Download Section -->
-    <section style="margin: 1em; padding: 1em 0; padding-bottom: 1.5em; border: 1px solid var(--surface-bright); border-left: 0; border-right:0" id="download" class="section download">
-        <h2 style="margin: 0;">Download Now</h2>
-        <p>Get the latest version of MPC-HC and enjoy high quality playback.</p>
-        <a href="https://github.com/clsid2/mpc-hc/releases">
-            <button style="margin: 0;" class="btn ripple">Download</button>
-        </a>
+    <section id="download" class="section download" style="height: auto;">
+        <div>
+            <h2 style="margin: 0;">Download Now</h2>
+            <p>Get the latest version of MPC-HC and enjoy high quality playback.</p>
+            <a href="https://github.com/clsid2/mpc-hc/releases">
+                <button style="margin: 0;" class="btn ripple">Download</button>
+            </a>
+        </div>
+        <img id="mpclnd" src="Media_Player_Classic_logo.png" />
     </section>
 
     <!-- About Section -->
